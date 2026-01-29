@@ -37,14 +37,29 @@ This leads to:
 ## Core Analytical Questions
 #### Q1. Do measurable public transport accessibility gaps exist between Melbourne suburbs?
     
-```
-Which suburbs are well-served, and which are structurally disadvantaged in terms of access to public transport services?
-```
+
+*Which suburbs are well-served, and which are structurally disadvantaged in terms of access to public transport services?*
+
 
 **Purpose**
 - Identify spaital inequality in service provision
 - Establish a baseline for equity-focused planning deicisions
 
+#### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
+
+*Does relying on stop quantity alone misrepresent true accessibility and lead to suboptimal policy deicisions?*
+
+**Purpose**
+- Challenge simplistic infrastructure metrics
+- Demonstrate the value of connectivity and network based indicators over raw asset counts
+
+#### Q3. Where do high-density residential or employment areas exhibit low transport accessibility?
+
+*Which suburbs show a mismatch between transport supply and land-use demand, indicating potential influenciencies in network planning?*
+
+**Purpose**
+- Surface priority intervention zones
+- Support targeted, evidence-based investment rather than uniform expansion
 ---
 
 ## Key Metrics

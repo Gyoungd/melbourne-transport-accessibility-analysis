@@ -34,6 +34,19 @@ This leads to:
 
 ---
 
+## Core Analytical Questions
+#### Q1. Do measurable public transport accessibility gaps exist between Melbourne suburbs?
+    
+```
+Which suburbs are well-served, and which are structurally disadvantaged in terms of access to public transport services?
+```
+
+**Purpose**
+- Identify spaital inequality in service provision
+- Establish a baseline for equity-focused planning deicisions
+
+---
+
 ## Key Metrics
 - Stop Density (per km²)
 - Route Diversity Index
@@ -58,17 +71,13 @@ This leads to:
 
 ---
 
-## Deliverables
-- Analytics-ready database schema
-- Metirc calculation SQL scripts
-- Tableau dashboards
-- Stakeholder-style poster & LinkedIn summary
-
----
-
 ## Data Sources
 - Public Transport Victoria (GTFS, 2021)
 - ABS boundary data (SA2 / suburb level)
 
 Note: Historical data is used tdo demonstrate **methodology and analytical capability**, not todescribe current service levels.
 
+---
+
+## Data Structure
+![GTFS Data Structure](./images/GTFS%20Data%20Structure.jpg)

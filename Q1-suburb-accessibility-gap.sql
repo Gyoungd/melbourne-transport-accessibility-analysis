@@ -270,4 +270,19 @@ SELECT
 from final f;
 
 
-select
+-- column names of agg_q1_acc_Sa2
+
+select *
+from ptv.agg_q1_acc_sa2;
+
+select * from ptv.sal2021_mel;
+
+select distinct sa2_code, sa2_name, region_type,
+    stop_count, stop_density_per_km2, accessibility_rank, accessibility_score, accessibility_quantile
+from ptv.agg_q1_acc_sa2
+order by accessibility_quantile;
+
+select sa2_code, sa2_name, accessibility_quantile, count(*) as duplicate_region_n
+from ptv.agg_q1_acc_sa2
+group by 1,2,3
+order by sa2_name, accessibility_quantile;

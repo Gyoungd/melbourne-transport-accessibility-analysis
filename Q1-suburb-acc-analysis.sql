@@ -30,22 +30,29 @@ order by stop_density desc);
 
 select * from ptv.q1_stop_density;
 
-select * from ptv.sa2_boundary;
-
--- Add geom column for choropleth map vis
-
-alter table ptv.q1_stop_density add column geom public.geometry(multipolygon, 7844);
-
-update ptv.q1_stop_density q
-set geom = b.geom_7844
-from ptv.sa2_boundary b
-where q.sa2_code = b.sa2_code;
-
-select * from ptv.q1_stop_density;
-
-select percentile_cont(0.5) within group (order by stop_density) from ptv.q1_stop_density;
-
-select distinct sa2_code, sa2_name, stop_density from ptv.q1_stop_density order by stop_density limit 15;
-
 -- Route Density
+with route_stop_times as (
+    select st.trip_id,
+        st.stop_id,
+        t.route_id,
+        st.arrival_time,
+        st.departure_time,
+        st.stop_sequence,
+        s.sa2_code,
+        s.sa2_name,
+        s.area_km2
 
+    from ptv.stop_in_sa2 s left join ptv.stop_times st
+    on s.stop_id = st.stop_id
+    join ptv.trips t on st.trip_id = t.trip_id
+),
+route_count as (select sa2_code, sa2_name,
+count(distinct route_id) as n_routes
+from route_stop_times
+group by 1,2
+order by count(distinct route_id) desc)
+select distinct r.sa2_code,
+    r.sa2_name,
+    round(r.n_routes / COALESCE(rs.area_km2, 1)::numeric, 4) as route_density
+from route_count r join route_stop_times rs on r.sa2_code = rs.sa2_code
+order by route_density desc;

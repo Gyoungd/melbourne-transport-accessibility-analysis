@@ -25,17 +25,31 @@ How close can we access to stops in SA2 (Suburbs)?
 - High number of stops $\neq$ High number of travel options
 - This indicator means easy accessibility to stops
 
-#### Route Density
+#### Route Coverage
 
-How various travel options we have per SA2 (Suburbs)?
+To what extent is a suburb covered by distinct public transport routes, relative to its geogrphic size?
 
 **Calculation**
 
-<div style = 'text-align:center;'>Route Density = distinct route count in SA2 / SA2 area (km2)</div><br>
+<div style = 'text-align:center;'>Route Coverage = (Number of distinct routes in SA2) / (SA2 area in km2)</div><br>
 
 
-- Identify variety of travle routes/choices for commuters
-- Evaluate the potential level of accessibility to other suburbs
+- Stops are first spatially assigned to SA2 boundaries
+- Routes are linked via trips → stop_times → stops
+- `COUNT(DISTINCT route_id)` is used to avoid inflating coverage by service frequency
+- Area normalisation ensures comparability across differently sized suburbs
+
+**Interpretation**
+
+- **Higher route coverage** indicates
+    - Greater network diversity within the suburb
+    - More route-level options available to residents
+    - Strong structural connectivity, independent of timetable frequency
+- **Lower route coverage** indicates
+    - Limited variety of routes serving the area
+    - Potential reliance on a small number of corridors
+    - Structural undersupply, even if some services run frequently
+- It does **not** measure service intensity or frequency
 
 #### Service Intensity
 

@@ -41,7 +41,7 @@ To what extent is a suburb covered by distinct public transport routes, relative
 
 **Interpretation**
 
-- **Higher route coverage** indicates
+- **Higher route coverage** indicates. 
     - Greater network diversity within the suburb
     - More route-level options available to residents
     - Strong structural connectivity, independent of timetable frequency

@@ -156,7 +156,7 @@ analysis_date as (
     JOIN LATERAL generate_series(p.period_start, p.period_end, interval '1 day') d ON true
     where extract(isodow from d) between 1 and 5 --mon(1) fri(5)
 ),
---select * from analysis_date;
+-- services within params & weekday
 active_services as(
     select distinct c.service_id
     from ptv.calendar c
@@ -176,23 +176,73 @@ base_events as (
     SELECT
         st.trip_id,
         st.stop_id,
-        t.service_id,
-        si.sa2_code,
-        si.sa2_name
+        t.service_id
     from ptv.stop_times st join ptv.trips t on st.trip_id=t.trip_id
     join active_services a on t.service_id=a.service_id
-    join stop_in_sa2 si on st.stop_id=si.stop_id
 ),
-stop_time_events as (
-    select sa2_code, sa2_name,
-    count(*) as n_stop_time_events
-    from base_events
+-- number of actived day within period per service_id
+service_day_counts as(
+    SELECT
+        c.service_id,
+        count(*)::int as active_weekdays
+    from ptv.calendar c
+    join active_services a on a.service_id = c.service_id
+    join analysis_date ad on ad.d between c.start_date and c.end_date
+    and (
+        (ad.isodow = 1 and c.monday=1) OR
+        (ad.isodow = 2 and c.tuesday=1) OR
+        (ad.isodow = 3 and c.wednesday=1) OR
+        (ad.isodow = 4 and c.thursday=1) OR
+        (ad.isodow = 5 and c.friday=1)
+    )
+    group by c.service_id
+),
+-- Total number of stop_times event + sa2 mapping
+base_events_weighted as (
+    select
+        be.trip_id,
+        be.stop_id,
+        be.service_id,
+        sdc.active_weekdays
+    from base_events be
+    join service_day_counts sdc on be.service_id = sdc.service_id
+    where sdc.active_weekdays > 0
+),
+base_events_sa2 as (
+    select
+        bew.trip_id,
+        bew.stop_id,
+        bew.service_id,
+        bew.active_weekdays,
+        si.sa2_code,
+        si.sa2_name
+    from base_events_weighted bew
+    join ptv.stop_in_sa2 si
+    on bew.stop_id = si.stop_id
+),
+-- Get number of services per suburb (weighted by active weekdays)
+stop_time_events as(
+    select
+        sa2_code,
+        sa2_name,
+        sum(active_weekdays)::bigint as n_stop_events_period
+    from base_events_sa2
     group by sa2_code, sa2_name
+),
+-- To get average service_intensity (daily) since 5 weekday
+weekday_cnt as (
+    select count(*)::int as n_weekdays from analysis_date
 )
-select se.sa2_code,
-    se.sa2_name,
-    se.n_stop_time_events,
-    b.area_km2,
-    round((se.n_stop_time_events / area_km2)::numeric, 2) as service_intensity
-from stop_time_events se join ptv.sa2_boundary b on se.sa2_code=b.sa2_code
-order by service_intensity desc;
+SELECT
+    ste.sa2_code as suburb_code,
+    ste.sa2_name as suburb,
+    round((ste.n_stop_events_period / wc.n_weekdays)::numeric, 2) as avg_events_per_weekday,
+    round(((ste.n_stop_events_period / wc.n_weekdays) / b.area_km2)::numeric, 2) as service_intensity_per_weekday
+FROM
+    stop_time_events ste 
+    join weekday_cnt wc on true
+    join ptv.sa2_boundary b on ste.sa2_code = b.sa2_code
+order by service_intensity_per_weekday desc;
+
+
+

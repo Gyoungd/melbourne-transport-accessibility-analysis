@@ -137,4 +137,62 @@ select * from active_services_by_week
 order by active_services desc, week_start desc
 limit 10;
 -- 2023-04-14 ~ 2023-04-20
-
+-- Fixed Analysis Period: 2023-04-14 ~ 2023-04-20
+-- Weekday only
+-- Used Tables
+    -- stop_time
+    -- trips
+    -- calendar
+    -- stop_in_sa2: filter stops within sa2 area
+    -- sa2_boundary: get sa2 area_km2
+with params as(
+    select 
+    date '2023-04-14' as period_start,
+    date '2023-04-20' as period_end
+),
+analysis_date as (
+    select d::date as d, extract(isodow from d)::int as isodow
+    from params p
+    JOIN LATERAL generate_series(p.period_start, p.period_end, interval '1 day') d ON true
+    where extract(isodow from d) between 1 and 5 --mon(1) fri(5)
+),
+--select * from analysis_date;
+active_services as(
+    select distinct c.service_id
+    from ptv.calendar c
+    join params p on true
+    join analysis_date ad
+    on ad.d between c.start_date and c.end_date
+    and (
+        (ad.isodow = 1 and c.monday=1) OR
+        (ad.isodow = 2 and c.tuesday=1) OR
+        (ad.isodow = 3 and c.wednesday=1) OR
+        (ad.isodow = 4 and c.thursday=1) OR
+        (ad.isodow = 5 and c.friday=1)
+    )
+    where c.start_date <=p.period_end and c.end_date >= p.period_start
+),
+base_events as (
+    SELECT
+        st.trip_id,
+        st.stop_id,
+        t.service_id,
+        si.sa2_code,
+        si.sa2_name
+    from ptv.stop_times st join ptv.trips t on st.trip_id=t.trip_id
+    join active_services a on t.service_id=a.service_id
+    join stop_in_sa2 si on st.stop_id=si.stop_id
+),
+stop_time_events as (
+    select sa2_code, sa2_name,
+    count(*) as n_stop_time_events
+    from base_events
+    group by sa2_code, sa2_name
+)
+select se.sa2_code,
+    se.sa2_name,
+    se.n_stop_time_events,
+    b.area_km2,
+    round((se.n_stop_time_events / area_km2)::numeric, 2) as service_intensity
+from stop_time_events se join ptv.sa2_boundary b on se.sa2_code=b.sa2_code
+order by service_intensity desc;

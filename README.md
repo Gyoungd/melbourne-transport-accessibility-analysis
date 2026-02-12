@@ -35,15 +35,33 @@ This leads to:
 ---
 
 ## Core Analytical Questions
-#### Q1. Do measurable public transport accessibility gaps exist between Melbourne suburbs?
+#### Q1. Do measurable public transport accessibility gaps exist between Melbourne suburbs when evaluated using service density, service intensity, and route coverage?
     
 
-*Which suburbs are well-served, and which are structurally disadvantaged in terms of access to public transport services?*
+*Which suburbs are structurally well-served, and which are underserved when controlling for spatial and weekday service frequency?*
 
 
 **Purpose**
-- Identify spaital inequality in service provision
-- Establish a baseline for equity-focused planning deicisions
+- Quantify spatial service inequality using multiple complementary indicators  
+- Move beyond raw stop counts by incorporating service frequency and route diversity  
+- Provide an analytically robust baseline for transport equity evaluation
+
+
+**Key Metrics**
+
+1. Stop Density
+    <&nbsp;>Number of transport stops per km2 within each SA2.
+    <&nbsp;>Captures infrastructure concentration but not service frequency.
+
+2. Service Intensity (Weekday Average)
+    <&nbsp;>Average weekday stop-time events per km2.
+    <&nbsp;>Incorporates service frequency and temporal availability.
+
+3. Route Coverage
+    <&nbsp;>Number or distinct routes service each SA2.
+    <&nbsp;>Reflects network diversity and multimodal connectivity.
+
+
 
 #### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
 
@@ -60,13 +78,6 @@ This leads to:
 **Purpose**
 - Surface priority intervention zones
 - Support targeted, evidence-based investment rather than uniform expansion
----
-
-## Key Metrics
-- Stop Density (per km²)
-- Route Diversity Index
-- Multimodal Connectivity Ratio
-- Accessibility. Composite Score (ACS)
 
 ---
 

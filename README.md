@@ -64,7 +64,7 @@ This leads to:
     &nbsp;Number or distinct routes service each SA2.
     &nbsp;Reflects network diversity and multimodal connectivity.
 
-▶ ![Q1 Analysis Summary](Q1-Analysis-Summary.md)
+▶ [Q1 Analysis Summary](Q1-Analysis-Summary.md)
 
 #### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
 

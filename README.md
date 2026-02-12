@@ -50,18 +50,21 @@ This leads to:
 **Key Metrics**
 
 1. Stop Density
-    <&nbsp;>Number of transport stops per km2 within each SA2.
-    <&nbsp;>Captures infrastructure concentration but not service frequency.
+
+    &nbsp;Number of transport stops per km2 within each SA2.
+    &nbsp;Captures infrastructure concentration but not service frequency.
 
 2. Service Intensity (Weekday Average)
-    <&nbsp;>Average weekday stop-time events per km2.
-    <&nbsp;>Incorporates service frequency and temporal availability.
+
+    &nbsp;Average weekday stop-time events per km2.
+    &nbsp;Incorporates service frequency and temporal availability.
 
 3. Route Coverage
-    <&nbsp;>Number or distinct routes service each SA2.
-    <&nbsp;>Reflects network diversity and multimodal connectivity.
 
+    &nbsp;Number or distinct routes service each SA2.
+    &nbsp;Reflects network diversity and multimodal connectivity.
 
+▶ ![Q1 Analysis Summary](Q1-Analysis-Summary.md)
 
 #### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
 

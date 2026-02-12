@@ -57,27 +57,6 @@ order by route_coverage desc);
 select PERCENTILE_CONT(0.5) within group (order by route_coverage) from ptv.q1_route_coverage;
 
 -- Service Intensity
-select trip_id, count(*) as n_trip from ptv.stop_times
-group by trip_id
-having count(*) > 1
-order by count(*) desc;
-
--- Join stop_times & calendar (bridge - trips, based on trip_id)
-/*with base_table as (select st.trip_id,
-    st.stop_id,
-    st.arrival_time,
-    st.departure_time,
-    st.stop_sequence,
-    c.*
-from ptv.stop_times st join ptv.trips t on st.trip_id = t.trip_id
-join ptv.calendar c on t.service_id = c.service_id
-order by st.trip_id, st.arrival_time, st.stop_sequence),
-common_period as (  -- 2023-04-24 2023-03-17
-select
-    max(start_date) as common_start,
-    min(end_date) as common_end
-from base_table)*/
-
 -- Get the Weekday Intersection
 with weekdays as (
     select distinct service_id,
@@ -145,6 +124,7 @@ limit 10;
     -- calendar
     -- stop_in_sa2: filter stops within sa2 area
     -- sa2_boundary: get sa2 area_km2
+create table ptv.q1_service_intensity as(    
 with params as(
     select 
     date '2023-04-14' as period_start,
@@ -242,7 +222,7 @@ FROM
     stop_time_events ste 
     join weekday_cnt wc on true
     join ptv.sa2_boundary b on ste.sa2_code = b.sa2_code
-order by service_intensity_per_weekday desc;
+order by service_intensity_per_weekday desc
+);
 
-
-
+select * from ptv.q1_service_intensity;

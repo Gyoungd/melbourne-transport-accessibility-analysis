@@ -16,17 +16,16 @@ create table ptv.stop_in_sa2 as(
 select * from ptv.stop_in_sa2;
 
 -- Stop Density
+drop table if exists ptv.q1_stop_density;
+
 create table ptv.q1_stop_density as(
-with nstops_sa2 as (select sa2_code, sa2_name,
-    count(distinct stop_id) as n_stops
-from ptv.stop_in_sa2
-group by 1,2)
-select n.sa2_code,
-    n.sa2_name,
-    round((n.n_stops::numeric/coalesce(nullif(s.area_km2, 0), 1))::numeric,4) as stop_density
-from ptv.stop_in_sa2 s join nstops_sa2 n
-on s.sa2_code = n.sa2_code
-order by stop_density desc);
+select sa2_code,
+ sa2_name,
+ round(count(distinct stop_id) / nullif(max(area_km2), 0)::numeric, 4) as stop_density
+ from ptv.stop_in_sa2
+ group by sa2_code, sa2_name
+ order by stop_density desc
+);
 
 select * from ptv.q1_stop_density;
 
@@ -226,3 +225,31 @@ order by service_intensity_per_weekday desc
 );
 
 select * from ptv.q1_service_intensity;
+
+select count(distinct sa2_name) from ptv.q1_stop_density;
+
+select * from ptv.mb2021_mel;
+
+select count(distinct suburb_code) from ptv.q1_service_intensity;
+select count(distinct sa2_code) from ptv.q1_stop_density;
+
+select s.*, sd.* from ptv.q1_service_intensity s full join ptv.q1_stop_density sd
+on s.suburb_code = sd.sa2_code
+where suburb_code is null or sa2_code is null
+;
+
+select c.*, t.trip_id, st.stop_id, si.sa2_code, si.sa2_name from ptv.stop_times st join ptv.trips t 
+on st.trip_id = t.trip_id
+join ptv.calendar c on t.service_id = c.service_id
+join ptv.stop_in_sa2 si on st.stop_id=si.stop_id
+where sa2_name = 'Box Hill North';
+
+-- 2023-04-14 ~ 2023-04-20
+-- Due to the selective period when calculate service_intensity,
+-- there are gap in suburb between service intensity data and other 2 indicators' data
+-- e.g., Box Hill North, has data between 2023-03-17 and 2023-04-06
+-- Which is out from 2023-04-14 ~ 2023-04-20 in service intensity calculation base.
+-- Thus in service intensity table, Box Hill North doesn't exist.
+
+select * from ptv.calendar;
+

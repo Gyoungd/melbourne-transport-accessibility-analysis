@@ -1,0 +1,361 @@
+sa2_code,sa2_name,stop_density
+206041505,Melbourne CBD - West,66.6446
+206041504,Melbourne CBD - North,55.2098
+206041503,Melbourne CBD - East,39.9109
+206051513,St Kilda - Central,33.1683
+206041117,Carlton,29.1496
+206061135,Armadale,28.8621
+206071143,Fitzroy North,27.5453
+206061136,Prahran - Windsor,25.8221
+206041510,West Melbourne - Residential,25.4674
+206071142,Fitzroy,25.4091
+206041509,Southbank - East,24.8805
+206011107,Brunswick West,24.8532
+206011495,Brunswick - North,24.4941
+206011496,Brunswick - South,24.1430
+209021525,Reservoir - South East,23.4541
+208021179,Elsternwick,23.4133
+213031348,Footscray,23.1510
+206041506,North Melbourne,23.0904
+206031502,Essendon - East,22.5068
+206051514,St Kilda - West,21.9991
+206011497,Coburg - East,21.6195
+206061516,South Yarra - South,20.7745
+206011106,Brunswick East,20.7565
+207031163,Box Hill,20.6804
+206051512,South Melbourne,20.6390
+206061515,South Yarra - North,20.5200
+206021499,Northcote - East,20.4925
+206051130,Port Melbourne,20.4369
+213011336,Sunshine,20.2861
+206021110,Alphington - Fairfield,20.1042
+206051134,St Kilda East,19.8910
+206041125,South Yarra - West,19.3047
+208021176,Carnegie,19.1885
+206031116,Moonee Ponds,19.0562
+209021428,Preston - East,18.8523
+209021526,Reservoir - South West,18.8446
+208021181,Murrumbeena,17.8958
+208021427,Bentleigh East - South,17.8742
+208021178,Caulfield - South,17.7140
+206041508,Southbank (West) - South Wharf,17.6505
+206041118,Docklands,17.5963
+206011498,Coburg - West,17.2573
+206051129,Elwood,16.8396
+212041563,Dandenong - North,16.5428
+208021180,Hughesdale,16.4221
+206041119,East Melbourne,16.2088
+206071518,Richmond - North,16.1157
+206071140,Carlton North - Princes Hill,16.0584
+208021177,Caulfield - North,16.0465
+206021112,Thornbury,15.8097
+206071141,Collingwood,15.7852
+207011521,Kew - South,15.7300
+213031352,Yarraville,15.6563
+207011149,Camberwell,15.6359
+209011199,Heidelberg West,15.5434
+207031165,Burwood (Vic.),15.4806
+213031350,Seddon - Kingsville,15.4747
+208021426,Bentleigh East - North,15.4393
+206031113,Ascot Vale,15.3800
+210031538,Pascoe Vale,15.3344
+210011226,Airport West,15.3226
+207031166,Burwood East,15.2521
+206031115,Flemington,15.1813
+210031237,Fawkner,14.9463
+206021500,Northcote - West,14.8211
+209021524,Reservoir - North West,14.7901
+208041194,Malvern - Glen Iris,14.7849
+208011172,Hampton,14.7768
+207031161,Blackburn,14.6411
+212051326,Oakleigh - Huntingdale,14.4557
+213031349,Maribyrnong,14.3807
+209021429,Preston - West,14.2956
+211041271,Nunawading,14.1806
+212051567,Clayton (North) - Notting Hill,14.1525
+208011171,Highett (West) - Cheltenham,14.0999
+211041270,Mitcham (Vic.),14.0359
+209011204,Watsonia,14.0018
+208021182,Ormond - Glen Huntly,13.9612
+210011230,Niddrie - Essendon West,13.9129
+208011169,Brighton (Vic.),13.9021
+207031164,Box Hill North,13.8540
+206011109,Pascoe Vale South,13.7173
+208031190,Mentone,13.7104
+210051247,Meadow Heights,13.6203
+206031501,Essendon (West) - Aberfeldie,13.4998
+212021454,Endeavour Hills - South,13.4256
+207011520,Hawthorn - South,13.3706
+206041124,Parkville,13.3376
+213051467,Werribee - East,13.2757
+208031188,Highett (East) - Cheltenham,13.1638
+207031162,Blackburn South,13.0694
+209041220,Mill Park - North,13.0299
+207021425,Doncaster East - South,13.0034
+213051590,Wyndham Vale - South,12.9069
+208031187,Chelsea Heights,12.8325
+211041269,Forest Hill,12.7768
+208041195,Malvern East,12.6862
+206051128,Albert Park,12.6191
+208011168,Beaumaris,12.5679
+210011231,Strathmore,12.5456
+206061138,Toorak,12.4903
+209041529,Lalor - East,12.3383
+209021523,Reservoir - North East,12.3230
+213051362,Hoppers Crossing - South,12.2640
+207011148,Balwyn North,12.2059
+210051242,Broadmeadows,12.1222
+206071139,Abbotsford,12.0646
+208021174,Bentleigh - McKinnon,12.0496
+212041316,Noble Park North,11.9772
+213011333,Kings Park (Vic.),11.9568
+210031236,Coburg North,11.8897
+212051322,Glen Waverley - West,11.8575
+211031268,Ringwood North,11.8395
+207011155,Surrey Hills (West) - Canterbury,11.7502
+207021424,Doncaster East - North,11.7146
+213041463,Caroline Springs,11.6492
+207021157,Doncaster,11.6263
+211031266,Ringwood,11.6057
+213011334,St Albans - North,11.4976
+214011371,Frankston,11.4425
+206071517,Richmond (South) - Cremorne,11.4252
+212041565,Keysborough - North,11.3571
+213031347,Braybrook,11.3554
+210011534,Keilor East,11.3060
+209011198,Heidelberg - Rosanna,11.3004
+211041272,Vermont,11.2832
+210051543,Craigieburn - West,11.2480
+210031439,Gowanbrae,11.1638
+207031167,Surrey Hills (East) - Mont Albert,11.1192
+207011147,Balwyn,11.1012
+212041312,Dandenong North,10.8921
+209011200,Ivanhoe,10.8912
+212041460,Noble Park - West,10.8492
+210031440,Hadfield,10.8184
+214021592,Mornington - West,10.7747
+212041318,Springvale South,10.7477
+212031562,Hampton Park - West,10.7372
+208011173,Sandringham - Black Rock,10.7318
+207021160,Templestowe Lower,10.6105
+209011196,Bundoora - East,10.5529
+208031193,Mordialloc - Parkdale,10.5434
+213051585,Tarneit - South,10.5395
+212031560,Cranbourne North - West,10.4518
+208011170,Brighton East,10.3432
+211011446,Boronia,10.3012
+213021344,Newport,10.2935
+212051325,Mulgrave,10.2642
+206041121,Kensington (Vic.),10.2469
+210031535,Glenroy - East,10.2438
+207011154,Kew East,10.2109
+212051327,Wheelers Hill,10.0604
+213051583,Tarneit - Central,10.0474
+212031458,Narre Warren South - West,10.0367
+211031451,Croydon - West,10.0051
+207011152,Hawthorn East,9.9365
+207011146,Ashburton (Vic.),9.8722
+208031185,Carrum - Patterson Lakes,9.7869
+212051319,Ashwood - Chadstone,9.6898
+213021346,Williamstown,9.6634
+208031189,Edithvale - Aspendale,9.6082
+211011260,Wantirna South,9.5856
+212041309,Clarinda - Oakleigh South,9.4906
+210051542,Craigieburn - North West,9.3766
+207011519,Hawthorn - North,9.3661
+213031351,West Footscray - Tottenham,9.3623
+209011197,Greensborough,9.3107
+214011372,Frankston North,9.2170
+211011256,Rowville - Central,9.1479
+209041221,Mill Park - South,9.1286
+208031186,Chelsea - Bonbeach,9.0367
+212021455,Narre Warren - North East,9.0297
+211031450,Croydon - East,9.0163
+212051321,Glen Waverley - East,8.9496
+210031537,Oak Park,8.9216
+211011447,Ferntree Gully - North,8.8780
+213011339,Sydenham,8.8632
+212021295,Doveton,8.8596
+210031536,Glenroy - West,8.8086
+207011150,Glen Iris - East,8.7644
+211011448,Ferntree Gully (South) - Upper Ferntree Gully,8.7450
+213011335,St Albans - South,8.6180
+213011332,Keilor Downs,8.6154
+213011331,Delahey,8.5567
+210011533,Avondale Heights,8.5045
+211031263,Bayswater North,8.4789
+212041310,Clayton South,8.4409
+207021156,Bulleen,8.3953
+213011569,Deer Park,8.2944
+213051580,Point Cook - North East,8.2827
+213051361,Hoppers Crossing - North,8.2452
+212041459,Noble Park - East,8.2293
+207011522,Kew - West,8.2129
+212051568,Clayton - Central,8.1317
+211041273,Vermont South,8.0868
+212051323,Mount Waverley - North,8.0210
+211011251,Bayswater,7.9584
+212051324,Mount Waverley - South,7.9311
+213041461,Burnside,7.8354
+209041223,Thomastown,7.8318
+208031191,Moorabbin - Heatherton,7.7786
+210051250,Tullamarine,7.7724
+212041317,Springvale,7.7449
+212021456,Narre Warren - South West,7.7394
+213021343,Altona North,7.6610
+213011338,Sunshine West,7.6328
+209021205,Kingsbury,7.5485
+211011254,Knoxfield - Scoresby,7.5350
+209041216,Bundoora - North,7.4246
+211031265,Croydon Hills - Warranwood,7.3762
+213051588,Truganina - South West,7.2514
+213041360,Taylors Hill,7.2045
+206051511,Port Melbourne Industrial,7.1964
+213011328,Ardeer - Albion,7.1914
+214011375,Seaford (Vic.),7.0797
+212021297,Hallam,6.9526
+207021159,Templestowe,6.9501
+211051277,Kilsyth,6.7960
+206041507,Royal Botanic Gardens Victoria,6.6613
+209041217,Bundoora - West,6.6393
+212041313,Dingley Village,6.6275
+212031457,Narre Warren South - East,6.5928
+211011257,Rowville - North,6.4786
+210051545,Roxburgh Park - North,6.4435
+212021293,Berwick - North,6.3823
+209041528,Doreen - South,6.3724
+206071145,Clifton Hill - Alphington,6.3360
+209011203,Viewbank - Yallambie,6.1538
+213041577,Melton,6.0824
+211051284,Upwey - Tecoma,6.0750
+212021553,Berwick - South East,6.0723
+213041462,Burnside Heights,6.0137
+210051443,Craigieburn - South,5.8752
+209011201,Ivanhoe East - Eaglemont,5.8448
+212031561,Hampton Park - East,5.8415
+209041527,Doreen - North,5.8274
+210051441,Craigieburn - Central,5.7955
+213041575,Hillside,5.7559
+210051243,Campbellfield - Coolaroo,5.7184
+211011259,Wantirna,5.6595
+211031267,Ringwood East,5.6437
+213021345,Seabrook,5.5550
+210051544,Roxburgh Park (South) - Somerton,5.5203
+213051581,Point Cook - North West,5.4453
+212031557,Cranbourne East - North,5.4433
+209041431,Epping - East,5.4065
+210051245,Gladstone Park - Westmeadows,5.3811
+213011337,Sunshine North,5.3591
+209041532,Mernda - South,5.3326
+212031559,Cranbourne North - East,5.3178
+209041436,South Morang - South,5.2944
+208031184,Braeside,5.2859
+211031452,Croydon South,5.2535
+212031300,Cranbourne,5.2213
+214011370,Carrum Downs,5.1713
+209041433,Epping (Vic.) - West,5.1650
+213051587,Truganina - South East,5.1539
+212021554,Berwick - South West,5.0299
+209011202,Montmorency - Briar Hill,4.7396
+209041530,Lalor - West,4.6929
+206041120,Flemington Racecourse,4.6803
+209041432,Epping - South,4.6626
+214011373,Frankston South,4.4647
+213021342,Altona Meadows,4.3629
+208031183,Aspendale Gardens - Waterways,4.3343
+212031306,Lynbrook - Lyndhurst,4.2139
+211021261,Donvale - Park Orchards,4.1348
+213021341,Altona,4.0713
+213011340,Taylors Lakes,4.0075
+209041435,South Morang - North,3.8663
+211011258,Rowville - South,3.8496
+213051363,Laverton,3.8206
+211051280,Montrose,3.7950
+210011228,Keilor,3.7684
+212021453,Endeavour Hills - North,3.7315
+213041358,Melton West,3.5521
+209031209,Eltham,3.5413
+211051281,Mooroolbark,3.5086
+213041578,Melton South - Weir Views,3.4469
+214021591,Mornington - East,3.4042
+213011329,Cairnlea,3.4041
+212011552,Pakenham - South West,3.3677
+214021384,Rosebud - McCrae,3.2359
+212031304,Cranbourne West,3.1794
+214021383,Point Nepean,2.9467
+208031192,Moorabbin Airport,2.9266
+212031555,Clyde North - North,2.9064
+206041127,West Melbourne - Industrial,2.9035
+211011449,The Basin,2.6249
+214021382,Mount Martha,2.6152
+214011374,Langwarrin,2.5789
+211051283,Mount Evelyn,2.4140
+212041564,Dandenong - South,2.3804
+213051466,Point Cook - South,2.3345
+210051442,Craigieburn - North,2.3218
+209041531,Mernda - North,2.3035
+213041571,Brookfield,2.2437
+210041540,Sunbury - South,2.2192
+212011549,Pakenham - North East,2.1140
+212031556,Clyde North - South,2.0867
+209031213,Plenty - Yarrambat,1.9922
+210041541,Sunbury - West,1.8782
+212041566,Keysborough - South,1.8588
+213011570,Derrimut,1.8100
+211051275,Chirnside Park,1.8020
+213051464,Point Cook - East,1.7858
+209031215,Wattle Glen - Diamond Creek,1.7524
+211021262,Warrandyte - Wonga Park,1.7268
+211051282,Mount Dandenong - Olinda,1.6733
+210011227,Essendon Airport,1.4903
+211051274,Belgrave - Selby,1.4020
+211011255,Lysterfield,1.3521
+214021381,Mount Eliza,1.3359
+213051584,Tarneit - North,1.3241
+212011546,Beaconsfield - Officer,1.2034
+209031214,Research - North Warrandyte,1.1650
+212031558,Cranbourne East - South,1.1266
+211051278,Lilydale - Coldstream,0.9877
+212011551,Pakenham - South East,0.9053
+214021377,Dromana,0.7768
+210051445,Mickleham - Yuroke,0.7623
+210051246,Greenvale - Bulla,0.7402
+214021379,Hastings - Somers,0.7165
+212031303,Cranbourne South,0.7104
+214011376,Skye - Sandhurst,0.7067
+209041437,Wollert,0.6866
+213051586,Truganina - North,0.6848
+213051368,Werribee - South,0.6838
+213041572,Cobblebank - Strathtulloh,0.6071
+210051248,Melbourne Airport,0.5923
+212021299,Narre Warren North,0.5523
+213051468,Werribee - West,0.5246
+213051582,Tarneit (West) - Mount Cottrell,0.5175
+210041240,Sunbury,0.5094
+212031308,Pearcedale - Tooradin,0.4772
+214021385,Somerville,0.4602
+213051589,Wyndham Vale - North,0.4291
+211051279,Monbulk - Silvan,0.3794
+213041353,Bacchus Marsh,0.3768
+212011550,Pakenham - North West,0.3648
+213041359,Rockbank - Mount Cottrell,0.3498
+213041576,Kurunjang - Toolern Vale,0.3061
+209031210,Hurstbridge,0.2696
+210041539,Diggers Rest,0.2505
+211051285,Wandin - Seville,0.2327
+212011289,Emerald - Cockatoo,0.2207
+209041225,Whittlesea,0.1913
+213041574,Fraser Rise - Plumpton,0.1873
+210021232,Gisborne,0.1847
+213051579,Manor Lakes - Quandong,0.1804
+211051276,Healesville - Yarra Glen,0.1489
+211051286,Yarra Valley,0.1083
+209041224,Wallan,0.0867
+209031211,Kinglake,0.0783
+210021234,Riddells Creek,0.0480
+214021378,Flinders,0.0418
+212011547,Bunyip - Garfield,0.0355
+210021235,Romsey,0.0240
+210021233,Macedon,0.0137
+212011548,Koo Wee Rup,0.0072
+209031212,Panton Hill - St Andrews,0.0068

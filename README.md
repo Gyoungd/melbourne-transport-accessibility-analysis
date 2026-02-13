@@ -46,6 +46,23 @@ This leads to:
 - Move beyond raw stop counts by incorporating service frequency and route diversity  
 - Provide an analytically robust baseline for transport equity evaluation
 
+#### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
+
+*Does relying on stop quantity alone misrepresent true accessibility and lead to suboptimal policy deicisions?*
+
+**Purpose**
+- Challenge simplistic infrastructure metrics
+- Demonstrate the value of connectivity and network based indicators over raw asset counts
+
+#### Q3. Where do high-density residential or employment areas exhibit low transport accessibility?
+
+*Which suburbs show a mismatch between transport supply and land-use demand, indicating potential influenciencies in network planning?*
+
+**Purpose**
+- Surface priority intervention zones
+- Support targeted, evidence-based investment rather than uniform expansion
+
+---
 
 **Key Metrics**
 
@@ -63,24 +80,6 @@ This leads to:
 
     &nbsp;Number or distinct routes service each SA2.
     &nbsp;Reflects network diversity and multimodal connectivity.
-
-▶ [Q1 Analysis Summary](Q1-Analysis-Summary.md)
-
-#### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
-
-*Does relying on stop quantity alone misrepresent true accessibility and lead to suboptimal policy deicisions?*
-
-**Purpose**
-- Challenge simplistic infrastructure metrics
-- Demonstrate the value of connectivity and network based indicators over raw asset counts
-
-#### Q3. Where do high-density residential or employment areas exhibit low transport accessibility?
-
-*Which suburbs show a mismatch between transport supply and land-use demand, indicating potential influenciencies in network planning?*
-
-**Purpose**
-- Surface priority intervention zones
-- Support targeted, evidence-based investment rather than uniform expansion
 
 ---
 

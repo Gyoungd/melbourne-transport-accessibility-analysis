@@ -12,7 +12,7 @@ This analysis evaluates weekday public transport accessibility from a **pessenge
 Average number of stop-time events per weekday per square kilometre.
 
 ### Formula
-`Service Intensity = (Average weekday stop_time events per SA2) / Area (km2)`
+`Service Intensity = (Average weekday stop_time events per SA2) / Area (km²)`
 
 ### What it measures
 
@@ -27,50 +27,54 @@ Average number of stop-time events per weekday per square kilometre.
 - Suitable for cross-suburb equity comparison
 
 ### Key Insight
-Service intensity is **strongly concentrated in inner-city SA2s**, indicating spatial imbalance in weekday service provision.
+Service intensity is **strongly concentrated in inner-city Suburbs(SA2s)**, indicating spatial imbalance in weekday service provision.
 
-## Indicator 2: Stop-Time Event Volume (Demand-Side)
-### Defomotopm
-Total number of scheduled stop-time events occurring during active weekday services within a fixed representative period. 
+## Indicator 2: Stops Density (Supply-Side Infrastructure Metric)
+### Definition
+Number of unique public transport stops located within each SA2, noirmalised by land area (stops per km²).
 
 ### What it measures
 
-- Volume of scheduled service activity
-- Proxy for passenger-visible transport supply
-- Reflects how often vehicles arrive at stops
+- Spatial concentration of physical transport access points
+- Infrastructure availability independent of service frequency
+- Physical network penetration across suburban geography
 
 ### Why it matters
 
-- Uses GTFS stop_times (most granular schedule unit)
-- More representative than route or service coutns alone
-- Aligns with "how often can I catch transport?" logic
+- Controls for suburb size, allowing fair cross-suburb comparison
+- Identifies infrastructure gaps in outer growth corridors
+- Distinguishes between "network presence" and "operational intensity"
+- Servers as a baseline supply-side accessibility metric
 
 ### Key Insight
-Some outer suburbs show moderate service volume but low intensity once area size is considered.
+Outer metropolitan suburbs(SA2s) exhibit structurally low stop density once area is normalised, indicating infrastructure under-provision relative to inner-city zones.
 
-## Indicator 3: Active Service Coverage (Temporal Validaty Filter)
+## Indicator 3: Route Coverage (Network Connectivity Metric)
 
 ### Definition
-Number of weekdays each service_id is active within the analysis period
+Number of distinct public transport routes servicing stops within each suburbs(SA2), normalised by land area (routes per km²)
 
 ### What it measures
 
-- Temporal consistency of services
-- Prevents overcounting partial or irregular schedules
-- Ensures fair comparison across services
+- Network diversity within a suburb
+- Structural connectivity beyond stop count
+- Availability of alternative travel paths
+- Breadth of network integration within local geography
 
 ### Why it matters
 
-- Filters GTFS services using calendar + weekday logic
-- Avoids bias from services active only 1-2 days
-- Strengthens analytical reliability
+- Stop density alone may overestimate accessibility
+- Higher route coverage implies greater directional flexibility
+- Indicates network redundancy and resilience
+- Better predictor of service intensity compared to raw stop counts
+
 
 ### Key Insight
-Weighting by active weekdays produces as more realistic representation of weekday service availability.
+Several suburbs show moderate stop density but limited route diversity, suggesting constrained network flexibility despite physical infrastructure presence.
 
-## Analst Notes
+## Analyst Notes
 
-- Fixed analysis window chosen based on **maximum weekday service overlap**
-- Calendar exceptions intentionally excluded to maintain baseline comparability
-- Metrics designed for **Tableau Visualisation**
-- Scalable methodology applicable to other cities or time windows
+- Analysis window aligned to peak weekday service period to ensure representative baseline conditions
+- Calendar exceptions excluded to preserve temporal consistency across suburbs
+- MEtrics structured for decision-ready visual analytics and cross-suburb comparability
+- Methodology designed for scalability and transferability across cities and timeframes

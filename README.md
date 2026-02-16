@@ -1,111 +1,197 @@
 # Melbourne Public Transport Accessibility Analysis (2021 GTFS)
 
-## Project Overview
-This project analyses the accessibility of Melbourne's public transport system using **Victorian PTV GTFS data (2021)**, the analysis identifies **suburb-level public transport accessibility gaps** and translates them into **accountable, stakeholder-ready insights**.
+## 1. Project Overview
+This project analyses structural inequality in Melbourne’s public transport network using suburb-level accessibility metrics derived from 2021 GTFS data.
 
-The focus is. ot infrastructure description, but **decision-support analytics** for transport planning and. ervice equity.
+Rather than relying solely on stop counts, the analysis integrates:
 
----
+- Stop Density (infrastructure provision)
+- Route Coverage (network penetration)
+- Service Intensity (weekday service supply)
 
-## Business Problem
-Melbourne's public transport investment decisions are often made without a **quantitative, comparable accessibility metric** at suburb level.
-
-This leads to:
-- Uneven service coverage
-- Weak multimodal connectivity
-- Suburbs with high population or acitivity density being underserved
-
-**Stakeholders need data-backed evidence to prioritise interventions.**
+The objective is to quantify structural access gaps, identify under-served suburbs, and translate findings into decision-ready reporting outputs.
 
 ---
 
-## Stakeholders
-- **State Transport Planners(PTV / DoT Victoria)**
-- **Local Government Planners (City Councils)**
-- **Urban & Transport Policy Analysts**
+## 2. Business Problem
+Public transport investment decisions are often made without a standardised, suburb-level accessibility framework.
+
+This results in:
+
+- Uneven service distribution across growth corridors
+- Infrastructure-heavy but network-light configurations
+- Suburbs with high population or land area but structurally limited connectivity
+
+Stakeholders require data-backed evidence to prioritise intervention zones rather than relying on anecdotal infrastructure counts.
 
 ---
 
-## Analytical Objectives
+## 3. Analytical Objectives
 1. Quantify suburb-level public transport accessibility
-2. Identify statistically significant service gaps
-3. Compare multimodal connectivity (bus / train / tram)
-3. Produce insights suitable for executive reporting & visual storytelling
+2. Identify bottom-quartile structural deficit zones
+3. Compare stop density vs route coverage as drivers of service intensity
+4. Translate technical findings into executive-ready visual reporting
 
 ---
 
-## Core Analytical Questions
-#### Q1. Do measurable public transport accessibility gaps exist between Melbourne suburbs when evaluated using service density, service intensity, and route coverage?
-    
+## 4. Core Analytical Questions
+#### Q1. Where are structural access deficits located?
 
-*Which suburbs are structurally well-served, and which are underserved when controlling for spatial and weekday service frequency?*
+Which suburbs fall into the bottom quartile for:
 
+- Stop Density
+- Route Coverage
+- Service Intensity
 
-**Purpose**
-- Quantify spatial service inequality using multiple complementary indicators  
-- Move beyond raw stop counts by incorporating service frequency and route diversity  
-- Provide an analytically robust baseline for transport equity evaluation
+Are deficits isolated or geographically concentrated?
 
-#### Q2. How different are the conclusions when accessibility is measured by connectivity rather than stop counts?
+#### Q2. Does stop abundance guarantee service intensity?
 
-*Does relying on stop quantity alone misrepresent true accessibility and lead to suboptimal policy deicisions?*
+Is higher physical stop density associated with higher weekday service provision?
 
-**Purpose**
-- Challenge simplistic infrastructure metrics
-- Demonstrate the value of connectivity and network based indicators over raw asset counts
+Does infrastructure presence equate to effective accessibility?
 
-#### Q3. Where do high-density residential or employment areas exhibit low transport accessibility?
+#### Q3. Which structural factor better explains service inequality?
 
-*Which suburbs show a mismatch between transport supply and land-use demand, indicating potential influenciencies in network planning?*
+Between:
 
-**Purpose**
-- Surface priority intervention zones
-- Support targeted, evidence-based investment rather than uniform expansion
+- Stop Density
+- Route Coverage
+
+Which metric better explains variation in weekday service intensity?
 
 ---
 
-**Key Metrics**
+## 5. Key Metrics
 
 1. Stop Density
 
-    &nbsp;Number of transport stops per km2 within each SA2.
-    &nbsp;Captures infrastructure concentration but not service frequency.
+    &nbsp;Number of stops per km² within each SA2 suburb.
+    &nbsp;Captures infrastructure concentration.
 
 2. Service Intensity (Weekday Average)
 
-    &nbsp;Average weekday stop-time events per km2.
-    &nbsp;Incorporates service frequency and temporal availability.
+    &nbsp;Average weekday stop-time events per km².
+    &nbsp;Captures frequency and temporal supply.
+
 
 3. Route Coverage
 
-    &nbsp;Number or distinct routes service each SA2.
-    &nbsp;Reflects network diversity and multimodal connectivity.
+    &nbsp;Number of distinct routes serving each SA2 per km².
+    &nbsp;Captures network penetration and diversity.
 
 ---
 
-## Tech Stack
-- PostgreSQL + PostGIS (spatial data processing)
+## 6. Methodology & Data Engineering
+
+#### Database Construction
+- PostgreSQL database environment setup
+- GTFS dastaset ingestion and relational schema design
+- ERD-based table normalisation
+- Fact table creation for suburb-level metrics
+
+#### Analytical Workflow
+- Spatial joins (GTFS stops <-> SA2 boundaries)
+- Aggregation queries using SQL
+- Bottom-quartile thresholding
+- Correlation and regression diagnostics
+- Structured analytical reporting (poster format)
+
+All metric calculatinos were implemented in SQL (PostgreSQL).
+
+---
+
+## 7. Structural Findings
+
+### 7.1 Problem Identification (Poster 1)
+
+![poster 1](poster1.png)
+
+Two distinct structural deficit patterns were identified:
+
+**Infrastructure Deficit Zones**
+
+- Extremely low stop density per km²
+- Geographically concentrated in outer-growth suburbs
+
+**Netowrk Coverage Gaps**
+- Limited route penetration despite available infrastructure
+- Network design limitations rather than stop scarcity
+
+These suburbs represent priority intervention zones where baseline accessibility is structurally constrained.
+
+### 7.2 Structural Drivers (Poster 2)
+![poster 2](poster2.png)
+
+Correlation analysis shows:
+
+- Route Coverage explains ~88% of variation in service intensity
+- Stop Density explains ~57%
+
+**Key Insight**:
+
+Network structure is a stronger determinant of service intensity than physical stop abundance.
+
+High stop density alone does not guarantee high service levels.
+Connectivity and route penetration drive effective accessibility.
+
+
+### 7.3 Spatial Evidence (Poster 3)
+
+![poster 3](poster3.png)
+
+Spatial mapping reveals:
+
+- Service intensity deficits cluster in outer-growth corridors
+- Route coverage gaps appear along northern and eastern expansion fronts
+- Stop density shortages are concentrated in low-density fringe municipalities
+
+Transport inequality is geographically structured rather than randomly distributed.
+
+Outer suburbs experience compounded structural disadvantages across multiple indicators.
+
+---
+
+## 8. Business Implications
+- Infrastructure expansion alone is insufficient
+- Network redesign and route penetration strategies may yield stronger impact
+- Investment prioritisation should target structurally constrained growth corridors
+- Accessibility policy should shift from asset-count metrics to network-efficiency metrics
+
+This analysis supports evidence-based transport equity planning.
+
+---
+## 9. Deliverables
+- SQL-based metric calculation scripts
+- PostgreSQL relational schema & ERD
+- Analytical poster series (Executive reporting format)
+- Tableau dashboards & geospatial visualisations
+- GitHub repository for reproducibility
+
+---
+
+## 10. Tech Stack
+- PostgreSQL (data processing & aggregation)
 - SQL (analytics & feature engineering)
-- Tableau (executive dashboards & poster visuals)
-- GitHub (project documentation & reproducibility)
+- Tableau (executive dashboards)
+- R (geospatial visualisation)
+- GitHub (documentation & reproducibility)
 
 ---
 
-## Deliverables
-- Analytics-ready database schema
-- Metric calculation SQL scripts
-- Tableau (executive dashboards & poster visuals)
-- GitHub (project documentation & reproducibility)
-
----
-
-## Data Sources
+## 11. Data Sources
 - Public Transport Victoria (GTFS, 2021)
 - ABS boundary data (SA2 / suburb level)
 
-Note: Historical data is used tdo demonstrate **methodology and analytical capability**, not todescribe current service levels.
+*Historical data used to demonstrate methodology and analytical capability.*
 
 ---
 
-## Data Structure
-![GTFS Data Structure](./images/GTFS%20Data%20Structure.jpg)
+## Summary
+This porject demonstrates:
+
+- End-to-end analytica workflow design
+- SQL-based metric enginerring at scale
+- Structural inequality analysis
+- Business-oriented rerporting & visual storytelling
+- Translation of spatial analytics into policy-ready insight

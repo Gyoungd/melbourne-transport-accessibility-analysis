@@ -59,3 +59,9 @@ left join service_events_sa2 se on se.sa2_code=sb.sa2_code;
 
 
 select * from ptv.q1_sa2_metrics;
+
+select percentile_cont(.5) within group (order by stop_density) as median
+from ptv.q1_stop_density; -- 8.6815
+
+select percentile_cont(.5) within group (order by route_coverage) as median
+from ptv.q1_route_coverage; -- 3.8653
